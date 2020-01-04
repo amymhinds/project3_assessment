@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <title>Wish List</title>
+</head>
+<body>
+  
+<h1>Wish List</h1>
+
+{% if wish %}
+
+{% for w in wish %}
+  <div class="card">
+
+    <div class="card-content">
+      <table>
+      <th>Description</th>
+      <th>Delete</th>
+      <tr>
+      <td>{{ w.wish}}</td>
+      <td class = "delete"><a href="{% url 'wish_delete' w.id %}" class ="delete">X</a></td>
+      </tr>
+      </table>
+    </div>
+    </a>
+  </div>
+{% endfor %}
+{%else%}
+
+<p>Wish list empty</p>
+
+
+
+{%endif%}
+<div class ="add">
+<a href="{% url 'wish_create'%}"  >Add Wish</a>
+</div>
+</body>

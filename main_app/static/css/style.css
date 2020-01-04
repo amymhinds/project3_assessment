@@ -1,0 +1,20 @@
+table  {
+    margin: 0 auto;
+    border: solid;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.delete {
+    color: red;
+}
+
+.add {
+    text-align: center;
+    margin: 3rem;
+    font-size: 24px;
+    color: black;
+}
